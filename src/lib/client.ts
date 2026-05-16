@@ -670,6 +670,18 @@ export class XhsClient {
       page,
     });
   }
+
+  async getCreatorNoteAnalyzeList(
+    type: number = 0,
+    pageSize: number = 10,
+    pageNum: number = 1
+  ): Promise<unknown> {
+    return this.creatorGet("/api/galaxy/creator/datacenter/note/analyze/list", {
+      type,
+      page_size: pageSize,
+      page_num: pageNum,
+    });
+  }
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
